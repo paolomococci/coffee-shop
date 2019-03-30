@@ -10,12 +10,86 @@
         tools:context=".MainActivity">
 
     <TextView
+            android:id="@+id/introduction_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_view"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:text="@string/introduction_text_view"
+            android:textSize="@dimen/text_heading"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+            android:id="@+id/donut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            android:contentDescription="@string/donut_caption"
+            app:srcCompat="@drawable/donut"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/introduction_text"/>
+
+    <TextView
+            android:id="@+id/donut_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_of_donut_description"
+            android:layout_marginEnd="@dimen/margin_wide"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/donut"
+            app:layout_constraintTop_toTopOf="@+id/donut"/>
+
+    <ImageView
+            android:id="@+id/icecream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            android:contentDescription="@string/icecream_caption"
+            app:srcCompat="@drawable/icecream"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donut"/>
+
+    <TextView
+            android:id="@+id/icecream_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_of_icecream_description"
+            android:layout_marginEnd="@dimen/margin_wide"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icecream"
+            app:layout_constraintTop_toTopOf="@+id/icecream"/>
+
+    <ImageView
+            android:id="@+id/froyo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            android:contentDescription="@string/froyo_caption"
+            app:srcCompat="@drawable/froyo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icecream"/>
+
+    <TextView
+            android:id="@+id/froyo_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_of_froyo_description"
+            android:layout_marginEnd="@dimen/margin_wide"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/froyo"
+            app:layout_constraintTop_toTopOf="@+id/froyo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
