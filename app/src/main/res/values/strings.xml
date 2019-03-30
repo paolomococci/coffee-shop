@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">CoffeeShop</string>
     <string name="action_settings">Settings</string>
-    <string name="text_view">Hello World!</string>
+    <string name="introduction_text_view">Coffee Shop Desserts</string>
+    <string name="donut_caption">Sample donut</string>
+    <string name="text_of_donut_description">donut description</string>
+    <string name="icecream_caption">Icecream caption text</string>
+    <string name="text_of_icecream_description">Icecream description</string>
+    <string name="froyo_caption">Froyo caption text</string>
+    <string name="text_of_froyo_description">Froyo description</string>
 </resources>
