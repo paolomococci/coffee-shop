@@ -5,7 +5,11 @@
     <string name="donut_caption">Sample donut</string>
     <string name="text_of_donut_description">donut description</string>
     <string name="icecream_caption">Icecream caption text</string>
-    <string name="text_of_icecream_description">Icecream description</string>
+    <string name="text_of_icecream_description">Ice-cream description</string>
     <string name="froyo_caption">Froyo caption text</string>
     <string name="text_of_froyo_description">Froyo description</string>
+    <string name="donut_on_click_message">You have clicked on Donut</string>
+    <string name="icecream_on_click_message">You have clicked on Ice-cream</string>
+    <string name="froyo_on_click_message">You have clicked on FroYo</string>
+    <string name="activity_clicked_label_text">You have clicked on..</string>
 </resources>
