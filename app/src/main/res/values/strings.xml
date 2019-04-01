@@ -12,4 +12,24 @@
     <string name="icecream_on_click_message">You have clicked on Ice-cream</string>
     <string name="froyo_on_click_message">You have clicked on FroYo</string>
     <string name="activity_clicked_label_text">You have clicked on...</string>
+    <string name="first_name_label">first name:</string>
+    <string name="first_name">John</string>
+    <string name="last_name_label">last name:</string>
+    <string name="last_name">Johnson</string>
+    <string name="address_label">address:</string>
+    <string name="address_text">Adam street</string>
+    <string name="phone_label">phone:</string>
+    <string name="phone_text">393124578</string>
+    <string name="note_label">note:</string>
+    <string name="note_text">some note</string>
+    <string name="delivery_label">choose a delivery method:</string>
+    <string name="same_day_messenger_service">same day messenger service</string>
+    <string name="next_day_messenger_service">next day messenger service</string>
+    <string name="pick_up_messenger_service">pick up message service</string>
+    <string-array name="phone_labels_array">
+        <item>home</item>
+        <item>work</item>
+        <item>mobile</item>
+        <item>other</item>
+    </string-array>
 </resources>
