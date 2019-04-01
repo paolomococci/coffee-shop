@@ -19,7 +19,9 @@
 package local.example.coffeeshop
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import local.example.coffeeshop.R.id.activity_clicked_text_view
 import local.example.coffeeshop.R.layout.activity_clicked
 
 class ClickedActivity : AppCompatActivity() {
@@ -27,5 +29,9 @@ class ClickedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_clicked)
+        val intent = this.intent
+        val message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE)
+        val textView = findViewById<TextView>(activity_clicked_text_view)
+        textView.text = message
     }
 }
