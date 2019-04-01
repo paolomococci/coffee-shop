@@ -89,6 +89,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_MESSAGE = "com.example.android.droidcafe.extra.MESSAGE"
+        const val EXTRA_MESSAGE = "com.example.android.coffeeshop.extra.MESSAGE"
     }
 }
