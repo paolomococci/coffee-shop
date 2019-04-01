@@ -18,36 +18,77 @@
 
 package local.example.coffeeshop
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
-
-import kotlinx.android.synthetic.main.activity_main.*
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import local.example.coffeeshop.R.id.action_settings
+import local.example.coffeeshop.R.layout.activity_main
 
 class MainActivity : AppCompatActivity() {
 
+    private var messageText: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(activity_main)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        val floatingActionButton = findViewById<FloatingActionButton>(R.id.fab)
+        floatingActionButton.setOnClickListener {
+            val intent = Intent(
+                this@MainActivity,
+                ClickedActivity::class.java
+            )
+            intent.putExtra(MainActivity.EXTRA_MESSAGE, messageText)
+            startActivity(intent)
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+        menuInflater.inflate(
+            R.menu.menu_main,
+            menu
+        )
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_settings -> true
+            action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun showDonutOnClick(view: View) {
+        messageText = getString(R.string.donut_on_click_message)
+        displayToast(messageText.toString())
+    }
+
+    fun showIceCreamOnClick(view: View) {
+        messageText = getString(R.string.icecream_on_click_message)
+        displayToast(messageText.toString())
+    }
+
+    fun showFroYoOnClick(view: View) {
+        messageText = getString(R.string.froyo_on_click_message)
+        displayToast(messageText.toString())
+    }
+
+    private fun displayToast(message: String) {
+        Toast.makeText(
+            applicationContext,
+            message,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    companion object {
+        const val EXTRA_MESSAGE = "com.example.android.droidcafe.extra.MESSAGE"
     }
 }
