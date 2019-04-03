@@ -39,7 +39,8 @@ class ClickedActivity :
         val message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE)
         val textView = findViewById<TextView>(activity_clicked_text_view)
         textView.text = message
-        val spinner = findViewById<Spinner>(label_spinner)
+        /* spinner begin */
+        /*val spinner = findViewById<Spinner>(label_spinner)
         if (spinner != null) {
             spinner.onItemSelectedListener = this
         }
@@ -51,7 +52,8 @@ class ClickedActivity :
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         if (spinner != null) {
             spinner.adapter = adapter
-        }
+        }*/
+        /* spinner end */
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
