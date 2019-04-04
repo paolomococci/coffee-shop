@@ -7,6 +7,8 @@
         android:layout_height="match_parent"
         tools:context=".ClickedActivity">
 
+    <!-- head -->
+
     <TextView
             android:id="@+id/activity_clicked_text_view"
             android:layout_width="wrap_content"
@@ -17,6 +19,8 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- first name field -->
 
     <TextView
             android:id="@+id/first_name_label"
@@ -31,15 +35,17 @@
     <EditText
             android:id="@+id/first_name_text"
             android:hint="@string/first_name"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="@string/first_name"
             android:ems="10"
-            android:layout_marginEnd="100dp"
             android:autofillHints=""
-            app:layout_constraintBaseline_toBaselineOf="@+id/first_name_label"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginEnd="130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/first_name_label"/>
+
+    <!-- last name field -->
 
     <TextView
             android:id="@+id/last_name_label"
@@ -54,15 +60,17 @@
     <EditText
             android:id="@+id/last_name_text"
             android:hint="@string/last_name"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="@string/last_name"
             android:ems="10"
             android:autofillHints=""
-            android:layout_marginEnd="100dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/last_name_label"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginEnd="130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/last_name_label"/>
+
+    <!-- address field -->
 
     <TextView
             android:id="@+id/address_label"
@@ -77,15 +85,17 @@
     <EditText
             android:id="@+id/address_text"
             android:hint="@string/address_text"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="@string/address_text"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:layout_marginEnd="100dp"
             android:autofillHints=""
+            android:layout_marginEnd="130dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@+id/address_label"/>
+
+    <!-- phone field -->
 
     <TextView
             android:id="@+id/phone_label"
@@ -100,15 +110,17 @@
     <EditText
             android:id="@+id/phone_text"
             android:hint="@string/last_name"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:text="@string/phone_text"
             android:ems="10"
-            android:layout_marginEnd="100dp"
             android:autofillHints=""
+            android:layout_marginEnd="130dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@+id/phone_label" />
+
+    <!-- note field -->
 
     <TextView
             android:id="@+id/note_label"
@@ -123,12 +135,12 @@
     <EditText
             android:id="@+id/note_text"
             android:hint="@string/last_name"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="@string/note_text"
             android:inputType="textCapSentences|textMultiLine"
             android:ems="10"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="130dp"
             android:autofillHints=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@+id/note_label"/>
@@ -180,15 +192,14 @@
 
     <!-- spinner -->
 
-    <!--Spinner
+    <Spinner
             android:id="@+id/label_spinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_wide"
-            android:layout_marginStart="@dimen/default_margin"
-            android:layout_marginTop="@dimen/margin_wide"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/phone_text"
-            app:layout_constraintTop_toBottomOf="@+id/address_text"/-->
+            app:layout_constraintTop_toBottomOf="@+id/address_text"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
