@@ -40,7 +40,7 @@ class ClickedActivity :
         val textView = findViewById<TextView>(activity_clicked_text_view)
         textView.text = message
         /* spinner begin */
-        /*val spinner = findViewById<Spinner>(label_spinner)
+        val spinner = findViewById<Spinner>(label_spinner)
         if (spinner != null) {
             spinner.onItemSelectedListener = this
         }
@@ -52,7 +52,7 @@ class ClickedActivity :
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         if (spinner != null) {
             spinner.adapter = adapter
-        }*/
+        }
         /* spinner end */
     }
 
