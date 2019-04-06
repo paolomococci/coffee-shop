@@ -27,6 +27,6 @@
             android:icon="@drawable/ic_favorites"
             android:orderInCategory="30"
             android:title="@string/action_favorites"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="always"/>
 
 </menu>
