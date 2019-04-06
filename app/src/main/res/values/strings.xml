@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">CoffeeShop</string>
-    <string name="action_settings">Settings</string>
     <string name="introduction_text_view">Coffee Shop Desserts</string>
     <string name="donut_caption">Sample donut</string>
     <string name="text_of_donut_description">donut description</string>
@@ -32,4 +31,8 @@
         <item>mobile</item>
         <item>other</item>
     </string-array>
+    <string name="action_contact">contact</string>
+    <string name="action_clicked">clicked</string>
+    <string name="action_status">status</string>
+    <string name="action_favorites">favorites</string>
 </resources>
