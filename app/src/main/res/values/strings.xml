@@ -35,4 +35,7 @@
     <string name="action_clicked">clicked</string>
     <string name="action_status">status</string>
     <string name="action_favorites">favorites</string>
+    <string name="status_message">message of status</string>
+    <string name="favorites_message">message of favorites</string>
+    <string name="contact_message">message from contact</string>
 </resources>
