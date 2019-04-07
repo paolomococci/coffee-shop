@@ -27,8 +27,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import local.example.coffeeshop.R.id.action_settings
+import local.example.coffeeshop.R.id
 import local.example.coffeeshop.R.layout.activity_main
+import local.example.coffeeshop.R.string
+import local.example.coffeeshop.R.string.action_contact
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,15 +39,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_main)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(id.toolbar)
         setSupportActionBar(toolbar)
-        val floatingActionButton = findViewById<FloatingActionButton>(R.id.fab)
+        val floatingActionButton = findViewById<FloatingActionButton>(id.fab)
         floatingActionButton.setOnClickListener {
             val intent = Intent(
                 this@MainActivity,
                 ClickedActivity::class.java
             )
-            intent.putExtra(MainActivity.EXTRA_MESSAGE, messageText)
+            intent.putExtra(
+                EXTRA_MESSAGE,
+                messageText
+            )
             startActivity(intent)
         }
     }
@@ -59,24 +64,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
+        return optionsItemSelected(item)
     }
 
     fun showDonutOnClick(view: View) {
-        messageText = getString(R.string.donut_on_click_message)
+        messageText = getString(string.donut_on_click_message)
         displayToast(messageText.toString())
     }
 
     fun showIceCreamOnClick(view: View) {
-        messageText = getString(R.string.icecream_on_click_message)
+        messageText = getString(string.icecream_on_click_message)
         displayToast(messageText.toString())
     }
 
     fun showFroYoOnClick(view: View) {
-        messageText = getString(R.string.froyo_on_click_message)
+        messageText = getString(string.froyo_on_click_message)
         displayToast(messageText.toString())
     }
 
@@ -86,6 +88,40 @@ class MainActivity : AppCompatActivity() {
             message,
             Toast.LENGTH_SHORT
         ).show()
+    }
+
+    private fun sampleItemSelected(menuItem: MenuItem): Boolean {
+        val id = menuItem.itemId
+        return if (id == action_contact) {
+            true
+        } else super.onOptionsItemSelected(menuItem)
+    }
+
+    private fun optionsItemSelected(menuItem: MenuItem): Boolean {
+        when (menuItem.itemId) {
+            R.id.action_clicked -> {
+                val intent = Intent(
+                    this@MainActivity,
+                    ClickedActivity::class.java
+                )
+                intent.putExtra(EXTRA_MESSAGE, messageText)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_status -> {
+                displayToast(getString(R.string.status_message))
+                return true
+            }
+            R.id.action_favorites -> {
+                displayToast(getString(R.string.favorites_message))
+                return true
+            }
+            R.id.action_contact -> {
+                displayToast(getString(R.string.contact_message))
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(menuItem)
     }
 
     companion object {
