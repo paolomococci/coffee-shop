@@ -38,4 +38,5 @@
     <string name="status_message">message of status</string>
     <string name="favorites_message">message of favorites</string>
     <string name="contact_message">message from contact</string>
+    <string name="title_activity_clicked">activity clicked</string>
 </resources>
