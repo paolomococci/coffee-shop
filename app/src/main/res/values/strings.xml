@@ -41,4 +41,7 @@
     <string name="title_activity_clicked">activity clicked</string>
     <string name="date">Date</string>
     <string name="date_picker">date picker</string>
+    <string name="time">Time</string>
+    <string name="time_toast">Time</string>
+    <string name="time_picker">time picker</string>
 </resources>
