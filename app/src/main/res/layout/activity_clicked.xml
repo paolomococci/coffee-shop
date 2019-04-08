@@ -202,4 +202,20 @@
             app:layout_constraintStart_toEndOf="@+id/phone_text"
             app:layout_constraintTop_toBottomOf="@+id/address_text"/>
 
+    <!-- date button -->
+
+    <Button
+            android:id="@+id/date_button"
+            android:text="@string/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="showDatePicker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.05"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
