@@ -218,4 +218,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.05"/>
 
+    <!-- time button -->
+
+    <Button
+            android:id="@+id/time_button"
+            android:text="@string/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:onClick="showTimePicker"
+            app:layout_constraintStart_toEndOf="@+id/date_button"
+            app:layout_constraintBaseline_toBaselineOf="@+id/date_button"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
