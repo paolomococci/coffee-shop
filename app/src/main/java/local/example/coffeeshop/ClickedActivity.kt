@@ -96,6 +96,25 @@ class ClickedActivity :
         }
     }
 
+    fun processDatePickerResult(year: Int, month: Int, day: Int) {
+        val monthString = Integer.toString(month + 1)
+        val dayString = Integer.toString(day)
+        val yearString = Integer.toString(year)
+        val dateMessage = "$monthString/$dayString/$yearString"
+        Toast.makeText(
+            this,
+            getString(R.string.date) + dateMessage,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    fun showDatePicker(view: View) {
+        val newFragment = DatePickerFragment()
+        newFragment.show(
+            supportFragmentManager,
+            getString(R.string.date_picker))
+    }
+
     private fun displayToast(spinnerLabel: String) {
         Toast.makeText(
             applicationContext,
