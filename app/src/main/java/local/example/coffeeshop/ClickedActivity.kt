@@ -115,6 +115,25 @@ class ClickedActivity :
             getString(R.string.date_picker))
     }
 
+    fun processTimePickerResult(hourOfDay: Int, minute: Int) {
+        val hourString = Integer.toString(hourOfDay)
+        val minuteString = Integer.toString(minute)
+        val timeMessage = "$hourString:$minuteString"
+        Toast.makeText(
+            this,
+            getString(R.string.time_toast) + timeMessage,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    fun showTimePicker(view: View) {
+        val newFragment = TimePickerFragment()
+        newFragment.show(
+            supportFragmentManager,
+            getString(R.string.time_picker)
+        )
+    }
+
     private fun displayToast(spinnerLabel: String) {
         Toast.makeText(
             applicationContext,
