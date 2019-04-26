@@ -29,8 +29,7 @@ import androidx.appcompat.widget.Toolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import local.example.coffeeshop.R.id
 import local.example.coffeeshop.R.layout.activity_main
-import local.example.coffeeshop.R.string
-import local.example.coffeeshop.R.string.action_contact
+import local.example.coffeeshop.R.string.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,17 +67,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showDonutOnClick(view: View) {
-        messageText = getString(string.donut_on_click_message)
+        messageText = getString(donut_on_click_message)
         displayToast(messageText.toString())
     }
 
     fun showIceCreamOnClick(view: View) {
-        messageText = getString(string.icecream_on_click_message)
+        messageText = getString(icecream_on_click_message)
         displayToast(messageText.toString())
     }
 
     fun showFroYoOnClick(view: View) {
-        messageText = getString(string.froyo_on_click_message)
+        messageText = getString(froyo_on_click_message)
         displayToast(messageText.toString())
     }
 
@@ -99,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun optionsItemSelected(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
-            R.id.action_clicked -> {
+            id.action_clicked -> {
                 val intent = Intent(
                     this@MainActivity,
                     ClickedActivity::class.java
@@ -108,16 +107,16 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-            R.id.action_status -> {
-                displayToast(getString(R.string.status_message))
+            id.action_status -> {
+                displayToast(getString(status_message))
                 return true
             }
-            R.id.action_favorites -> {
-                displayToast(getString(R.string.favorites_message))
+            id.action_favorites -> {
+                displayToast(getString(favorites_message))
                 return true
             }
-            R.id.action_contact -> {
-                displayToast(getString(R.string.contact_message))
+            id.action_contact -> {
+                displayToast(getString(contact_message))
                 return true
             }
         }
